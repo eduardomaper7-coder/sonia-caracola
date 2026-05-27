@@ -1,81 +1,51 @@
 const Navbar = () => {
   return (
     <>
-      <div className="fixed top-0 z-50 w-full bg-[#8a6242] text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-center px-3 py-1 text-center text-[11px] sm:text-sm">
+      <div className="fixed top-0 z-50 w-full bg-[#063b4a] text-white shadow-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-3 py-0.5 text-center text-[10px] sm:text-xs">
           <a
-            href="https://www.google.com/maps/search/?api=1&query=C.+San+José+de+Calasanz+29+28902+Getafe+Madrid"
+            href="https://www.google.com/maps/search/?api=1&query=C.+de+Madrid+16+28912+Leganes+Madrid"
             target="_blank"
             rel="noopener noreferrer"
-            className="truncate hover:underline"
+            className="truncate font-medium hover:text-[#c7f5ff] transition"
           >
-            📍 C. San José de Calasanz, 29, 28902 Getafe, Madrid
+            📍 C. de Madrid, 16, 28912 Leganés, Madrid
           </a>
         </div>
       </div>
 
-      <header className="fixed left-0 top-[24px] z-40 w-full border-b border-black/10 bg-white/95 backdrop-blur-md sm:top-[28px]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-          
-          {/* Logo */}
-          <a href="#inicio" className="flex min-w-0 items-center">
-            <div className="max-w-[280px] leading-tight">
-              
-              <span className="block text-xs font-extrabold text-[#7a5638] md:hidden">
-                LALIS BEAUTY SALON
-              </span>
+      <header className="fixed left-0 top-[20px] z-40 w-full border-b border-white/10 bg-white/95 backdrop-blur-xl shadow-lg">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5">
 
-              <span className="block text-[11px] font-semibold text-[#b89574] whitespace-nowrap md:hidden">
-                Trabajamos para resaltar tu belleza
-              </span>
-
-              <span className="hidden text-sm font-extrabold text-[#7a5638] md:block md:text-xl">
-                LALIS BEAUTY SALON
-              </span>
-
-              <span className="hidden text-sm font-semibold text-[#b89574] whitespace-nowrap md:block">
-                Trabajamos para resaltar tu belleza
-              </span>
-            </div>
+          <a href="#inicio" className="leading-tight">
+            <span className="block text-sm font-black tracking-wide text-[#075569] md:text-xl">
+              SONIA CARACOLA
+            </span>
+            <span className="block text-[10px] font-medium text-[#0d6f86] md:text-xs">
+              Estética avanzada en Leganés
+            </span>
           </a>
 
-          {/* Navegación */}
           <nav className="hidden items-center gap-6 md:flex">
-            <a
-              href="/#inicio"
-              className="text-base font-semibold text-black hover:text-[#8a6242]"
-            >
+            <a href="#inicio" className="text-sm font-bold text-[#075569] hover:text-[#0ea5c6]">
               Inicio
             </a>
-
-            <a
-              href="/#servicios"
-              className="text-base font-semibold text-black hover:text-[#8a6242]"
-            >
+            <a href="#servicios" className="text-sm font-bold text-[#075569] hover:text-[#0ea5c6]">
               Servicios
             </a>
-
-            <a
-              href="/#tarifas"
-              className="text-base font-semibold text-black hover:text-[#8a6242]"
-            >
+            <a href="#tarifas" className="text-sm font-bold text-[#075569] hover:text-[#0ea5c6]">
               Precios
             </a>
-
-            <a
-              href="/#contacto"
-              className="text-base font-semibold text-black hover:text-[#8a6242]"
-            >
+            <a href="#contacto" className="text-sm font-bold text-[#075569] hover:text-[#0ea5c6]">
               Contacto
             </a>
           </nav>
 
-          {/* Botón teléfono */}
           <a
-            href="tel:647338753"
-            className="whitespace-nowrap rounded-lg bg-[#8a6242] px-3 py-2 text-xs font-bold text-white transition hover:bg-[#6f4e37] md:px-5 md:py-2.5 md:text-sm"
+            href="tel:614253037"
+            className="rounded-lg bg-gradient-to-r from-[#075569] to-[#0d6f86] px-4 py-1.5 text-xs font-black text-white shadow-lg transition hover:scale-105 md:px-5"
           >
-            📞 <span className="hidden md:inline">Llama al</span> 647 338 753
+            📞 614 253 037
           </a>
         </div>
       </header>

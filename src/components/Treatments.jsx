@@ -2,52 +2,58 @@ import { Link } from 'react-router-dom'
 
 const services = [
   {
-    title: 'Manicura profesional',
+    title: 'Cuidado facial y belleza diaria',
     description:
-      'Cuidado completo de tus manos y uñas con acabado limpio, elegante y duradero.',
+      'Higiene facial profunda, BB Glow, depilación, manicura, pedicura SPA y diseño de mirada.',
     image:
-      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80',
   },
   {
-    title: 'Pedicura estética',
+    title: 'Tratamientos corporales',
     description:
-      'Tratamiento para embellecer y cuidar tus pies, dejando una sensación de limpieza, suavidad y bienestar.',
+      'Maderoterapia, presoterapia, cavitación y remodelación corporal avanzada.',
     image:
-      'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80',
   },
   {
-    title: 'Uñas semipermanentes',
+    title: 'Medicina estética avanzada',
     description:
-      'Color intenso, brillo y resistencia para lucir unas uñas perfectas durante más tiempo.',
+      'Armonización facial, bioestimulación, exosomas y revitalización capilar.',
     image:
-      'https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80',
   },
   {
-    title: 'Diseño de uñas',
+    title: 'Estética especializada',
     description:
-      'Decoraciones, estilos personalizados y acabados modernos para resaltar tu belleza en cada detalle.',
+      'Micropigmentación, reconstrucción paramédica y eliminación de tatuajes.',
     image:
-      'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Tratamientos de lujo',
+    description:
+      'Diseño de mirada, cejas, pestañas y maquillaje profesional con acabados elegantes y sofisticados.',
+    image:
+      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80',
   },
 ]
 
 const Treatments = () => {
   return (
-    <section id="servicios" className="scroll-mt-28 bg-[#f4eadf] py-16">
+    <section id="servicios" className="scroll-mt-24 bg-[#eefcff] py-20">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 text-center">
-          <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#9b7653]">
+          <span className="text-sm font-black uppercase tracking-[0.28em] text-[#0d6f86]">
             Servicios destacados
           </span>
 
-          <h2 className="mt-3 text-3xl font-extrabold text-[#7a5638] sm:text-4xl">
-            Manicura y pedicura en Getafe
+          <h2 className="mt-4 text-4xl font-black text-[#075569] sm:text-5xl">
+            Estética avanzada en Leganés
           </h2>
 
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-neutral-600 sm:text-xl">
-            En Lalis Beauty Salon trabajamos para resaltar tu belleza con
-            servicios de manicura, pedicura y cuidado estético en un ambiente
-            cómodo, cercano y profesional.
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+            Tratamientos faciales, corporales y médico-estéticos diseñados para
+            realzar tu belleza natural.
           </p>
         </div>
 
@@ -55,32 +61,37 @@ const Treatments = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_rgba(122,86,56,0.10)] transition hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(122,86,56,0.18)] sm:flex-row"
+              className={`group flex min-h-[380px] flex-col overflow-hidden rounded-[2rem] border border-[#bdefff] bg-white shadow-[0_15px_45px_rgba(7,85,105,0.10)] transition hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(7,85,105,0.18)] sm:flex-row
+              
+              ${
+                index === 4
+                  ? 'md:col-span-2 md:mx-auto md:max-w-[760px]'
+                  : ''
+              }`}
             >
-              <div className="h-56 w-full sm:h-auto sm:w-[40%]">
+              <div className="h-60 w-full overflow-hidden sm:h-auto sm:w-[42%]">
                 <img
                   src={service.image}
-                  alt={`${service.title} en Getafe - Lalis Beauty Salon`}
+                  alt={service.title}
                   className="h-full w-full object-cover"
-                  loading="lazy"
                 />
               </div>
 
-              <div className="flex w-full flex-col justify-between p-6 sm:w-[60%]">
+              <div className="flex h-full w-full flex-col justify-between p-7 sm:w-[58%]">
                 <div>
-                  <h3 className="text-xl font-extrabold text-[#7a5638] sm:text-2xl">
+                  <h3 className="text-2xl font-black text-[#075569]">
                     {service.title}
                   </h3>
 
-                  <p className="mt-3 text-base leading-8 text-neutral-600 sm:text-lg">
+                  <p className="mt-4 text-lg leading-8 text-slate-600">
                     {service.description}
                   </p>
                 </div>
 
-                <div className="mt-6">
+                <div className="mt-7">
                   <Link
                     to="/tratamientos"
-                    className="inline-flex items-center gap-2 text-base font-semibold text-[#8a6242] transition hover:text-[#5f3f28]"
+                    className="inline-flex items-center rounded-full bg-[#075569] px-5 py-3 text-sm font-black text-white shadow-lg transition hover:bg-[#0d6f86]"
                   >
                     Más información →
                   </Link>
@@ -90,17 +101,19 @@ const Treatments = () => {
           ))}
         </div>
 
-        <div className="mt-14 text-center">
-          <p className="text-lg font-medium text-neutral-700">
-            ¿Quieres lucir unas uñas perfectas?
+        {/* CTA final */}
+        <div className="mt-16 rounded-[2rem] bg-gradient-to-r from-[#075569] to-[#0d6f86] px-6 py-10 text-center shadow-2xl">
+          <p className="text-xl font-bold text-white sm:text-2xl">
+            ¿Quieres descubrir el tratamiento ideal para ti?
           </p>
 
-          <Link
-            to="/tratamientos"
-            className="mt-5 inline-flex items-center rounded-xl bg-[#8a6242] px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-[#6f4e37]"
+          <a
+            href="#"
+            onClick={(e) => e.preventDefault()}
+            className="mt-6 inline-flex cursor-default items-center rounded-2xl bg-white px-8 py-4 text-lg font-black text-[#075569] shadow-xl"
           >
-            Ver todos los servicios
-          </Link>
+            Ver todos los tratamientos
+          </a>
         </div>
       </div>
     </section>
