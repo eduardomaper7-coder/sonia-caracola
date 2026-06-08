@@ -57,33 +57,35 @@ const Treatments = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group flex min-h-[380px] flex-col overflow-hidden rounded-[2rem] border border-[#bdefff] bg-white shadow-[0_15px_45px_rgba(7,85,105,0.10)] transition hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(7,85,105,0.18)] sm:flex-row
+              className={`group flex min-h-[300px] flex-col overflow-hidden rounded-[2rem] border border-[#bdefff] bg-white shadow-[0_15px_45px_rgba(7,85,105,0.10)] transition hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(7,85,105,0.18)] sm:min-h-[380px] sm:flex-row
               ${
                 index === 4
                   ? 'md:col-span-2 md:mx-auto md:max-w-[760px]'
                   : ''
               }`}
             >
-              <div className="h-60 w-full overflow-hidden sm:h-auto sm:w-[42%]">
+              {/* Imagen más grande */}
+              <div className="h-[420px] w-full overflow-hidden sm:h-auto sm:w-[42%]">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
                 />
               </div>
 
-              <div className="flex h-full w-full flex-col justify-between p-7 sm:w-[58%]">
+              {/* Caja de texto más compacta */}
+              <div className="flex w-full flex-col justify-between p-5 sm:w-[58%] sm:p-7">
                 <div>
                   <h3 className="text-2xl font-black text-[#075569]">
                     {service.title}
                   </h3>
 
-                  <p className="mt-4 text-lg leading-8 text-slate-600">
+                  <p className="mt-3 text-base leading-7 text-slate-600 sm:mt-4 sm:text-lg sm:leading-8">
                     {service.description}
                   </p>
                 </div>
 
-                <div className="mt-7">
+                <div className="mt-5 sm:mt-7">
                   <Link
                     to="/tratamientos"
                     className="inline-flex items-center rounded-full bg-[#075569] px-5 py-3 text-sm font-black text-white shadow-lg transition hover:bg-[#0d6f86]"
