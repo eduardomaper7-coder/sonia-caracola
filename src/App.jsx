@@ -4,6 +4,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import AboutSonia from './components/AboutSonia'
 import Treatments from './components/Treatments'
 import WhyUs from './components/WhyUs'
 import FeaturedBox from './components/FeaturedBox'
@@ -14,6 +15,7 @@ import Location from './components/Location'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import AllTreatments from './components/AllTreatments'
+import GallerySection from './components/GallerySection'
 
 import Legal from './pages/Legal'
 import BlogPost from './pages/BlogPost'
@@ -25,9 +27,13 @@ const Home = () => (
       <Hero />
     </div>
 
+    
+
     <Treatments />
     <WhyUs />
+    <AboutSonia />
     <FeaturedBox />
+    <GallerySection />
     <HowWeWork />
     <Testimonials />
     <BlogSection />
@@ -70,7 +76,7 @@ function App() {
           }
         />
 
-        {/* LEGAl */}
+        {/* LEGAL */}
         <Route
           path="/legal"
           element={

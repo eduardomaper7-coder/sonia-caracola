@@ -7,10 +7,10 @@ const FeaturedBox = () => {
           {/* Imagen */}
           <div className="h-[280px] w-full lg:h-[620px] lg:w-[60%]">
             <img
-              src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80"
-              alt="Centro de estética avanzada Sonia Caracola"
-              className="h-full w-full object-cover"
-            />
+  src="/sonia-caracola.jpg"
+  alt="Sonia Caracola"
+  className="h-full w-full object-cover"
+/>
           </div>
 
           {/* Caja texto */}
